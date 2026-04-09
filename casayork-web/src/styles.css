@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: #071224;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,139 @@
+/* --- ESTILOS BASE --- */
+.product-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.product-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.2);
+}
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+
+        /* --- HERO SECTION CON FONDO DE ELECTRÓNICA --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            /* Imagen de componentes electrónicos (Libre de autor de Unsplash) */
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        /* Capa oscura para legibilidad */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.65); /* Oscurece el fondo */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        /* --- TIPOGRAFÍA Y CHIPS --- */
+        .badge {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 10px 0;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .location {
+            font-size: 1.2rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        /* --- CONTENEDOR DE PRODUCTOS (GRID) --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .product-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px border rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+        }
+
+        .product-tag:hover {
+            background: #007bb5;
+            transform: translateY(-5px);
+        }
+
+        /* --- BOTÓN DE ACCIÓN --- */
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background-color: #007bb5;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 123, 181, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #00d4ff;
+            color: #002b44;
+            transform: scale(1.05);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .description { font-size: 1rem; }
+        }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+</head>
+
+<body>
+
+<div class="contact-page">
+  <div class="contact-wrapper">
+
+    <!-- IZQUIERDA -->
+    <div class="contact-left">
+      <h2>Formulario de Contacto</h2>
+
+      <form class="contact-form" id="form" action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Web3Forms -->
+        <input type="hidden" name="access_key" value="a0260763-330e-4cf8-933c-0e3d38ebd06f">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde tu página web">
+        <input type="hidden" name="from_name" value="Casa York Web">
+        <input type="checkbox" name="botcheck" style="display: none;">
+
+        <input type="text" id="name" name="name" placeholder="Nombre y Apellidos" required>
+
+        <div class="row">
+          <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+
+        <textarea id="message" name="message" placeholder="Mensaje o requerimiento" required></textarea>
+
+        <button type="submit">✉ Enviar Mensaje</button>
+
+        <div class="success-msg" id="success"></div>
+
+      </form>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="contact-right">
+      <div class="info-item">📍 San Diego #958, Santiago Centro</div>
+      <div class="info-item">📱 +56 9 8815 8808</div>
+      <div class="info-item">✉️ casayork958@gmail.com</div>
+      <div class="info-item">🕒 Lun. - Vie. 10:00 a 17:00</div>
+      <div class="info-item">🕒 Sáb. 10:00 a 14:00</div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

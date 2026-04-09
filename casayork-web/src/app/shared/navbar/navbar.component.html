@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/images/new.png" alt="Logo">
+
+  </div>
+
+  <button
+    class="menu-toggle"
+    [class.active]="menuAbierto"
+    (click)="toggleMenu()"
+    aria-label="Abrir menú"
+    type="button"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="menu" [class.active]="menuAbierto">
+    <li><a routerLink="/" (click)="cerrarMenu()">Inicio</a></li>
+    <li><a routerLink="/productos" (click)="cerrarMenu()">Productos</a></li>
+    <li><a routerLink="/contacto" (click)="cerrarMenu()">Contacto</a></li>
+    <li><a routerLink="/quienes-somos" (click)="cerrarMenu()">Sobre nosotros</a></li>
+  </ul>
+</nav>

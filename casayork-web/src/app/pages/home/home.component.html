@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa York - Electrónica y Robótica</title>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Precios bajos • Especial Estudiantes</span>
+            <h1>Electrónica Casa York</h1>
+            <span class="location">📍 San Diego 958, Santiago Centro</span>
+
+            <p class="description">
+                Potenciamos tus proyectos con los mejores productos del mercado.
+                Desde repuestos electrónicos hasta kits de robótica avanzada.
+            </p>
+
+            <div class="products-grid">
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: 'arduino' }" class="product-tag">🧠
+                    Arduino</a>
+
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: 'transformador' }" class="product-tag">⚡
+                    Transformadores</a>
+
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: 'batería' }" class="product-tag">🔋
+                    Baterías</a>
+
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: 'amplificador' }" class="product-tag">📢
+                    Amplificadores</a>
+
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: 'autotrafo' }" class="product-tag">🔌
+                    Autotrafos</a>
+
+                <a [routerLink]="['/productos']" [queryParams]="{ filtro: '' }" class="product-tag">🧩 Mucho más</a>
+            </div>
+
+            <a routerLink="/productos" class="cta-button">Ver Catálogo</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
