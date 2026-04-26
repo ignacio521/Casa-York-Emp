@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd casayork-web && npm install && npm run build",
+  "outputDirectory": "casayork-web/dist/casayork-web",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
