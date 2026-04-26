@@ -15,26 +15,78 @@
     <div class="contact-left">
       <h2>Formulario de Contacto</h2>
 
-      <form class="contact-form" id="form" action="https://api.web3forms.com/submit" method="POST">
+      <form
+        class="contact-form"
+        id="form"
+        #contactForm="ngForm"
+        (ngSubmit)="enviarFormulario(contactForm)"
+        novalidate>
 
-        <!-- Web3Forms -->
-        <input type="hidden" name="access_key" value="a0260763-330e-4cf8-933c-0e3d38ebd06f">
-        <input type="hidden" name="subject" value="Nuevo mensaje desde tu página web">
-        <input type="hidden" name="from_name" value="Casa York Web">
-        <input type="checkbox" name="botcheck" style="display: none;">
-
-        <input type="text" id="name" name="name" placeholder="Nombre y Apellidos" required>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nombre y Apellidos"
+          ngModel
+          #nameField="ngModel"
+          [class.invalid-field]="nameField.invalid && (nameField.dirty || nameField.touched)"
+          required>
+        <small class="field-error" *ngIf="nameField.invalid && (nameField.dirty || nameField.touched)">
+          Ingresa tu nombre y apellidos.
+        </small>
 
         <div class="row">
-          <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+          <div class="field-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Correo electrónico"
+              ngModel
+              #emailField="ngModel"
+              [class.invalid-field]="emailField.invalid && (emailField.dirty || emailField.touched)"
+              required
+              email>
+            <small class="field-error" *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)">
+              Ingresa un correo válido.
+            </small>
+          </div>
+
+          <div class="field-group">
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+              ngModel
+              #telefonoField="ngModel"
+              [class.invalid-field]="telefonoField.invalid && (telefonoField.dirty || telefonoField.touched)"
+              required
+              pattern="^[0-9+\s()-]{8,}$">
+            <small class="field-error" *ngIf="telefonoField.invalid && (telefonoField.dirty || telefonoField.touched)">
+              Ingresa un teléfono válido.
+            </small>
+          </div>
         </div>
 
-        <textarea id="message" name="message" placeholder="Mensaje o requerimiento" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Mensaje o requerimiento"
+          ngModel
+          #messageField="ngModel"
+          [class.invalid-field]="messageField.invalid && (messageField.dirty || messageField.touched)"
+          required></textarea>
+        <small class="field-error" *ngIf="messageField.invalid && (messageField.dirty || messageField.touched)">
+          Escribe tu mensaje o requerimiento.
+        </small>
 
-        <button type="submit">✉ Enviar Mensaje</button>
+        <button type="submit" [disabled]="contactForm.invalid || enviando">
+          {{ enviando ? 'Enviando...' : '✉ Enviar Mensaje' }}
+        </button>
 
-        <div class="success-msg" id="success"></div>
+        <div class="success-msg" *ngIf="successMessage">{{ successMessage }}</div>
+        <div class="success-msg error" *ngIf="errorMessage">{{ errorMessage }}</div>
 
       </form>
     </div>

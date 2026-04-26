@@ -74,6 +74,14 @@
   text-decoration: underline;
 }
 
+.whatsapp-link {
+  color: #22c55e;
+}
+
+.whatsapp-link:hover {
+  color: #4ade80;
+}
+
 /* BUSCADOR ESTILIZADO */
 .buscador-container {
   margin: 30px auto 0;

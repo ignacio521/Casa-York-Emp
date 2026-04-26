@@ -60,14 +60,34 @@ body {
 .row {
   display: flex;
   gap: 10px;
+  align-items: flex-start;
 }
 
-.row input {
+.row input,
+.field-group {
   flex: 1;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form textarea {
   height: 120px;
+}
+
+.invalid-field {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.12);
+}
+
+.field-error {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: #b91c1c;
+  font-size: 0.82rem;
 }
 
 /* BOTÓN */
@@ -85,10 +105,19 @@ body {
   background: #2f6a2f;
 }
 
+.contact-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
 /* MENSAJE */
 .success-msg {
   margin-top: 10px;
-  color: green;
+  color: #166534;
+}
+
+.success-msg.error {
+  color: #b91c1c;
 }
 
 /* DERECHA */
