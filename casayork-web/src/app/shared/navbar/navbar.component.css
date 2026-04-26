@@ -26,7 +26,6 @@
   position: relative;
   z-index: 2;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 /* Botón hamburguesa */
@@ -189,7 +188,6 @@
 
   .logo img {
     height: 84px;
-    mix-blend-mode: multiply;
   }
 
   .menu {
