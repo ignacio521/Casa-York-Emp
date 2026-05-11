@@ -17,7 +17,7 @@ interface Producto extends ProductoBase {
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   productos: Producto[] = [];
   productosFiltrados: Producto[] = [];
@@ -116,11 +116,20 @@ export class ProductosComponent implements OnInit {
     { nombre: 'Autotrafo', descripcion: '100watts', precio: '$15.900' },
     { nombre: 'Autotrafo', descripcion: '2000watts', precio: '$129.900' },
     { nombre: 'Cable de internet', descripcion: 'cat 6 10mts', precio: '$9.900' },
-    { nombre: 'Cable UTP', descripcion: 'cat 6' , precio: '$31.900' },
+    { nombre: 'Cable UTP', descripcion: 'cat 6', precio: '$31.900' },
     { nombre: 'Ups', descripcion: '650va 360watts', precio: '$89.900' },
     { nombre: 'Fuente de poder', descripcion: '6v 500ms', precio: '$6.500' },
-    { nombre: 'Ácido para placa pcv', descripcion: '1 Litro', precio: '$4.500' }
-  
+    { nombre: 'Cloruro Ferrico 40% 1L', descripcion: '', precio: '' },
+    { nombre: 'Jgos de caiman caiman', descripcion: '', precio: '' },
+    { nombre: 'Surtido de condensado', descripcion: 'partida desde 10uf hasta 60 uf x 450v', precio: '' },
+    { nombre: 'Surtido de cordón eléctrico', descripcion: '', precio: '' },
+    { nombre: 'Surtido de conectores faston', descripcion: '', precio: '' },
+    { nombre: 'Antena tv Exterior', descripcion: '', precio: '' },
+    { nombre: 'Antena tv Interior', descripcion: '', precio: '' },
+    { nombre: 'Power com 220v', descripcion: '', precio: '' },
+    { nombre: 'Lupa tercera mano', descripcion: '', precio: '$8.900' },
+    { nombre: 'Cautin gotts 20-200w', descripcion: '', precio: '' }
+
   ];
 
   terminoBusqueda = '';
